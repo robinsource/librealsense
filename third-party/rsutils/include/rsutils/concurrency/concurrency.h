@@ -26,7 +26,7 @@ class single_consumer_queue
     std::function<void(T const &)> const _on_drop_callback;
 
 public:
-    explicit single_consumer_queue< T >( unsigned int cap = QUEUE_MAX_SIZE,
+    explicit single_consumer_queue( unsigned int cap = QUEUE_MAX_SIZE,
                                          std::function< void( T const & ) > on_drop_callback = nullptr )
         : _cap( cap )
         , _accepting( true )
